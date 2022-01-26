@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  rust:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8001:8001
+    environment:
+      RUST_BACKTRACE: full
+    volumes:
+      - ./:/app
